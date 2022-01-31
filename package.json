@@ -2,9 +2,10 @@
   "name": "node-js-express-download-files",
   "version": "1.0.0",
   "description": "Node.js Express Download File Rest APis",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [
     "node js",
@@ -25,6 +26,8 @@
     "multer": "^1.4.2",
     "three": "^0.137.5",
     "three-gltf-loader": "^1.111.0",
-    "xmlhttprequest": "^1.8.0"
+    "xmlhttprequest": "^1.8.0",
+    "netlify-lambda": "^1.4.3",
+    "serverless-http": "^1.9.1"
   }
 }
