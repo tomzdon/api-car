@@ -18,7 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 router.post("/:name", (req, res) => {
   const fileName = req.params.name;
   const aut = req.body.aut;
-  const directoryPath = __basedir + "/.netlify/functions/resources/static/assets/uploads/";
+  const directoryPath = "./functions/resources/static/assets/uploads/";
+  console.log(__basedir)
   if (aut != "codesample") {
     res.status(401).send({
       message: "Unatorized",
